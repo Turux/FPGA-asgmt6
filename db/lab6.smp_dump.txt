@@ -1,0 +1,11 @@
+
+State Machine - |FSM|state
+Name state.STATE_7 state.READ1 state.READ2 state.READ3 state.READ4 state.COMPUTE state.STATE_6 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.STATE_6 0 0 0 0 0 0 1 1 
+state.COMPUTE 0 0 0 0 0 1 0 1 
+state.READ4 0 0 0 0 1 0 0 1 
+state.READ3 0 0 0 1 0 0 0 1 
+state.READ2 0 0 1 0 0 0 0 1 
+state.READ1 0 1 0 0 0 0 0 1 
+state.STATE_7 1 0 0 0 0 0 0 1 

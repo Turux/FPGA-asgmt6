@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 18 17:12:21 2015
+Quartus II Version : 7.1 Build 156 04/30/2007 SJ Full Version
+Revision Name : lab6
+Top-level Entity Name : FSM
+Family : Cyclone II
+Total logic elements : 371
+    Total combinational functions : 371
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

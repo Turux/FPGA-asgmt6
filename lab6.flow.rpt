@@ -1,0 +1,103 @@
+Flow report for lab6
+Wed Nov 18 17:12:45 2015
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Wed Nov 18 17:12:45 2015    ;
+; Quartus II Version                 ; 7.1 Build 156 04/30/2007 SJ Full Version ;
+; Revision Name                      ; lab6                                     ;
+; Top-level Entity Name              ; FSM                                      ;
+; Family                             ; Cyclone II                               ;
+; Device                             ; EP2C20F484C7                             ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; Yes                                      ;
+; Total logic elements               ; 372 / 18,752 ( 2 % )                     ;
+;     Total combinational functions  ; 371 / 18,752 ( 2 % )                     ;
+;     Dedicated logic registers      ; 6 / 18,752 ( < 1 % )                     ;
+; Total registers                    ; 6                                        ;
+; Total pins                         ; 36 / 315 ( 11 % )                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                           ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/18/2015 17:12:14 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab6                ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                           ;
++------------------------+--------+---------------+-------------+------------+
+; Assignment Name        ; Value  ; Default Value ; Entity Name ; Section Id ;
++------------------------+--------+---------------+-------------+------------+
+; PARTITION_NETLIST_TYPE ; SOURCE ; --            ; FSM         ; Top        ;
+; TOP_LEVEL_ENTITY       ; FSM    ; lab6          ; --          ; --         ;
++------------------------+--------+---------------+-------------+------------+
+
+
++----------------------------------------+
+; Flow Elapsed Time                      ;
++-------------------------+--------------+
+; Module Name             ; Elapsed Time ;
++-------------------------+--------------+
+; Analysis & Synthesis    ; 00:00:09     ;
+; Fitter                  ; 00:00:07     ;
+; Assembler               ; 00:00:08     ;
+; Classic Timing Analyzer ; 00:00:03     ;
+; Total                   ; 00:00:27     ;
++-------------------------+--------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab6 -c lab6
+quartus_fit --read_settings_files=off --write_settings_files=off lab6 -c lab6
+quartus_asm --read_settings_files=off --write_settings_files=off lab6 -c lab6
+quartus_tan --read_settings_files=off --write_settings_files=off lab6 -c lab6 --timing_analysis_only
+
+
+

@@ -1,0 +1,533 @@
+Analysis & Synthesis report for lab6
+Wed Nov 18 17:12:21 2015
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |FSM|state
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Mod1
+ 13. Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Div1
+ 14. Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Div0
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 18 17:12:21 2015    ;
+; Quartus II Version                 ; 7.1 Build 156 04/30/2007 SJ Full Version ;
+; Revision Name                      ; lab6                                     ;
+; Top-level Entity Name              ; FSM                                      ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 371                                      ;
+;     Total combinational functions  ; 371                                      ;
+;     Dedicated logic registers      ; 6                                        ;
+; Total registers                    ; 6                                        ;
+; Total pins                         ; 36                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                          ; FSM                ; lab6               ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Use smart compilation                                                          ; Off                ; Off                ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+
+; display_driver.v                 ; yes             ; User Verilog HDL File        ; H:/Workspaces/QII/lab6/display_driver.v                                        ;
+; decoder.v                        ; yes             ; User Verilog HDL File        ; H:/Workspaces/QII/lab6/decoder.v                                               ;
+; FSM.v                            ; yes             ; User Verilog HDL File        ; H:/Workspaces/QII/lab6/FSM.v                                                   ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/program files/altera/71/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/program files/altera/71/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/program files/altera/71/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal71.inc                    ; yes             ; Megafunction                 ; c:/program files/altera/71/quartus/libraries/megafunctions/aglobal71.inc       ;
+; db/lpm_divide_g6m.tdf            ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/lpm_divide_g6m.tdf                                   ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/sign_div_unsign_nlh.tdf                              ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/alt_u_div_g2f.tdf                                    ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/add_sub_lkc.tdf                                      ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/add_sub_mkc.tdf                                      ;
+; db/lpm_divide_d6m.tdf            ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/lpm_divide_d6m.tdf                                   ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/sign_div_unsign_klh.tdf                              ;
+; db/alt_u_div_a2f.tdf             ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/alt_u_div_a2f.tdf                                    ;
+; db/lpm_divide_aem.tdf            ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/lpm_divide_aem.tdf                                   ;
+; db/lpm_divide_dem.tdf            ; yes             ; Auto-Generated Megafunction  ; H:/Workspaces/QII/lab6/db/lpm_divide_dem.tdf                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 371           ;
+;                                             ;               ;
+; Total combinational functions               ; 371           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 114           ;
+;     -- 3 input functions                    ; 152           ;
+;     -- <=2 input functions                  ; 105           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 257           ;
+;     -- arithmetic mode                      ; 114           ;
+;                                             ;               ;
+; Total registers                             ; 6             ;
+;     -- Dedicated logic registers            ; 6             ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 36            ;
+; Maximum fan-out node                        ; state.COMPUTE ;
+; Maximum fan-out                             ; 44            ;
+; Total fan-out                               ; 1117          ;
+; Average fan-out                             ; 2.70          ;
++---------------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; |FSM                                      ; 371 (90)          ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |FSM                                                                                                                ; work         ;
+;    |decoder:comb_4|                       ; 260 (31)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_dem:auto_generated|  ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div0|lpm_divide_dem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_g2f:divider|    ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_aem:auto_generated|  ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div1|lpm_divide_aem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_klh:divider| ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
+;                |alt_u_div_a2f:divider|    ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Div1|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_g6m:auto_generated|  ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod0|lpm_divide_g6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod0|lpm_divide_g6m:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_g2f:divider|    ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod0|lpm_divide_g6m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider ; work         ;
+;       |lpm_divide:Mod1|                   ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_d6m:auto_generated|  ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod1|lpm_divide_d6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_klh:divider| ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod1|lpm_divide_d6m:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
+;                |alt_u_div_a2f:divider|    ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|decoder:comb_4|lpm_divide:Mod1|lpm_divide_d6m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
+;    |display_driver:comb_5|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|display_driver:comb_5                                                                                          ; work         ;
+;    |display_driver:comb_6|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|display_driver:comb_6                                                                                          ; work         ;
+;    |display_driver:comb_7|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FSM|display_driver:comb_7                                                                                          ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |FSM|state                                                                                                         ;
++---------------+---------------+-------------+-------------+-------------+-------------+---------------+---------------+------------+
+; Name          ; state.STATE_7 ; state.READ1 ; state.READ2 ; state.READ3 ; state.READ4 ; state.COMPUTE ; state.STATE_6 ; state.IDLE ;
++---------------+---------------+-------------+-------------+-------------+-------------+---------------+---------------+------------+
+; state.IDLE    ; 0             ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0          ;
+; state.STATE_6 ; 0             ; 0           ; 0           ; 0           ; 0           ; 0             ; 1             ; 1          ;
+; state.COMPUTE ; 0             ; 0           ; 0           ; 0           ; 0           ; 1             ; 0             ; 1          ;
+; state.READ4   ; 0             ; 0           ; 0           ; 0           ; 1           ; 0             ; 0             ; 1          ;
+; state.READ3   ; 0             ; 0           ; 0           ; 1           ; 0           ; 0             ; 0             ; 1          ;
+; state.READ2   ; 0             ; 0           ; 1           ; 0           ; 0           ; 0             ; 0             ; 1          ;
+; state.READ1   ; 0             ; 1           ; 0           ; 0           ; 0           ; 0             ; 0             ; 1          ;
+; state.STATE_7 ; 1             ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 1          ;
++---------------+---------------+-------------+-------------+-------------+-------------+---------------+---------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; temp4[2]                                            ; state.READ4         ; yes                    ;
+; temp3[2]                                            ; state.READ3         ; yes                    ;
+; temp4[1]                                            ; state.READ4         ; yes                    ;
+; temp3[1]                                            ; state.READ3         ; yes                    ;
+; temp4[0]                                            ; state.READ4         ; yes                    ;
+; temp3[0]                                            ; state.READ3         ; yes                    ;
+; temp1[2]                                            ; state.READ1         ; yes                    ;
+; temp2[2]                                            ; state.READ2         ; yes                    ;
+; temp1[1]                                            ; state.READ1         ; yes                    ;
+; temp2[1]                                            ; state.READ2         ; yes                    ;
+; temp1[0]                                            ; state.READ1         ; yes                    ;
+; temp2[0]                                            ; state.READ2         ; yes                    ;
+; temp4[3]                                            ; state.READ4         ; yes                    ;
+; temp3[3]                                            ; state.READ3         ; yes                    ;
+; temp1[3]                                            ; state.READ1         ; yes                    ;
+; temp2[3]                                            ; state.READ2         ; yes                    ;
+; temp3[9]                                            ; state.READ3         ; yes                    ;
+; temp4[9]                                            ; state.READ4         ; yes                    ;
+; temp3[8]                                            ; state.READ3         ; yes                    ;
+; temp4[8]                                            ; state.READ4         ; yes                    ;
+; temp3[7]                                            ; state.READ3         ; yes                    ;
+; temp4[7]                                            ; state.READ4         ; yes                    ;
+; temp3[6]                                            ; state.READ3         ; yes                    ;
+; temp4[6]                                            ; state.READ4         ; yes                    ;
+; temp3[5]                                            ; state.READ3         ; yes                    ;
+; temp4[5]                                            ; state.READ4         ; yes                    ;
+; temp3[4]                                            ; state.READ3         ; yes                    ;
+; temp4[4]                                            ; state.READ4         ; yes                    ;
+; temp1[9]                                            ; state.READ1         ; yes                    ;
+; temp2[9]                                            ; state.READ2         ; yes                    ;
+; temp1[8]                                            ; state.READ1         ; yes                    ;
+; temp2[8]                                            ; state.READ2         ; yes                    ;
+; temp1[7]                                            ; state.READ1         ; yes                    ;
+; temp2[7]                                            ; state.READ2         ; yes                    ;
+; temp1[6]                                            ; state.READ1         ; yes                    ;
+; temp2[6]                                            ; state.READ2         ; yes                    ;
+; temp1[5]                                            ; state.READ1         ; yes                    ;
+; temp2[5]                                            ; state.READ2         ; yes                    ;
+; temp1[4]                                            ; state.READ1         ; yes                    ;
+; temp2[4]                                            ; state.READ2         ; yes                    ;
+; Number of user-specified and inferred latches = 40  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state.STATE_6                         ; Lost fanout        ;
+; state.STATE_7                         ; Lost fanout        ;
+; state~7                               ; Lost fanout        ;
+; state~8                               ; Lost fanout        ;
+; state~9                               ; Lost fanout        ;
+; Total Number of Removed Registers = 5 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 6     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_g6m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_d6m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_aem ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:comb_4|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_dem ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Wed Nov 18 17:12:12 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab6 -c lab6
+Info: Found 1 design units, including 1 entities, in source file display_driver.v
+    Info: Found entity 1: display_driver
+Info: Found 1 design units, including 1 entities, in source file decoder.v
+    Info: Found entity 1: decoder
+Info: Found 1 design units, including 1 entities, in source file FSM.v
+    Info: Found entity 1: FSM
+Critical Warning (10846): Verilog HDL Instantiation warning at FSM.v(26): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at FSM.v(27): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at FSM.v(28): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at FSM.v(29): instance has no name
+Info: Elaborating entity "FSM" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at FSM.v(72): truncated value with size 32 to match size of target (10)
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(85): inferring latch(es) for variable "temp1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(85): inferring latch(es) for variable "temp2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(85): inferring latch(es) for variable "temp3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM.v(85): inferring latch(es) for variable "temp4", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "temp4[0]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[1]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[2]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[3]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[4]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[5]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[6]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[7]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[8]" at FSM.v(85)
+Info (10041): Inferred latch for "temp4[9]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[0]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[1]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[2]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[3]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[4]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[5]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[6]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[7]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[8]" at FSM.v(85)
+Info (10041): Inferred latch for "temp3[9]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[0]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[1]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[2]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[3]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[4]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[5]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[6]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[7]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[8]" at FSM.v(85)
+Info (10041): Inferred latch for "temp2[9]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[0]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[1]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[2]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[3]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[4]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[5]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[6]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[7]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[8]" at FSM.v(85)
+Info (10041): Inferred latch for "temp1[9]" at FSM.v(85)
+Info: Elaborating entity "decoder" for hierarchy "decoder:comb_4"
+Warning (10230): Verilog HDL assignment warning at decoder.v(19): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at decoder.v(20): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at decoder.v(26): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at decoder.v(27): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at decoder.v(31): truncated value with size 10 to match size of target (4)
+Info: Elaborating entity "display_driver" for hierarchy "display_driver:comb_5"
+Info: State machine "|FSM|state" contains 8 states
+Info: Selected Auto state machine encoding method for state machine "|FSM|state"
+Info: Encoding result for state machine "|FSM|state"
+    Info: Completed encoding using 8 state bits
+        Info: Encoded state bit "state.STATE_7"
+        Info: Encoded state bit "state.READ1"
+        Info: Encoded state bit "state.READ2"
+        Info: Encoded state bit "state.READ3"
+        Info: Encoded state bit "state.READ4"
+        Info: Encoded state bit "state.COMPUTE"
+        Info: Encoded state bit "state.STATE_6"
+        Info: Encoded state bit "state.IDLE"
+    Info: State "|FSM|state.IDLE" uses code string "00000000"
+    Info: State "|FSM|state.STATE_6" uses code string "00000011"
+    Info: State "|FSM|state.COMPUTE" uses code string "00000101"
+    Info: State "|FSM|state.READ4" uses code string "00001001"
+    Info: State "|FSM|state.READ3" uses code string "00010001"
+    Info: State "|FSM|state.READ2" uses code string "00100001"
+    Info: State "|FSM|state.READ1" uses code string "01000001"
+    Info: State "|FSM|state.STATE_7" uses code string "10000001"
+Info: Found 1 design units, including 1 entities, in source file c:/program files/altera/71/quartus/libraries/megafunctions/lpm_divide.tdf
+    Info: Found entity 1: lpm_divide
+Info: Elaborated megafunction instantiation "decoder:comb_4|lpm_divide:Mod0"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_g6m.tdf
+    Info: Found entity 1: lpm_divide_g6m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info: Found entity 1: sign_div_unsign_nlh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info: Found entity 1: alt_u_div_g2f
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info: Found entity 1: add_sub_lkc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info: Found entity 1: add_sub_mkc
+Info: Elaborated megafunction instantiation "decoder:comb_4|lpm_divide:Mod1"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_d6m.tdf
+    Info: Found entity 1: lpm_divide_d6m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info: Found entity 1: sign_div_unsign_klh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_a2f.tdf
+    Info: Found entity 1: alt_u_div_a2f
+Info: Elaborated megafunction instantiation "decoder:comb_4|lpm_divide:Div1"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_aem.tdf
+    Info: Found entity 1: lpm_divide_aem
+Info: Elaborated megafunction instantiation "decoder:comb_4|lpm_divide:Div0"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_dem.tdf
+    Info: Found entity 1: lpm_divide_dem
+Info: 5 registers lost all their fanouts during netlist optimizations. The first 5 are displayed below.
+    Info: Register "state.STATE_6" lost all its fanouts during netlist optimizations.
+    Info: Register "state.STATE_7" lost all its fanouts during netlist optimizations.
+    Info: Register "state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "state~8" lost all its fanouts during netlist optimizations.
+    Info: Register "state~9" lost all its fanouts during netlist optimizations.
+Info: Implemented 411 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 25 output pins
+    Info: Implemented 375 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Allocated 191 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 18 17:12:22 2015
+    Info: Elapsed time: 00:00:10
+
+
